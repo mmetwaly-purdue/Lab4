@@ -1,0 +1,3 @@
+work/FileTest.o: FileTest.c ../../../include/usertraps.h \
+ ../../../include/misc.h ../include/FileTest.h \
+ ../../../include/files_shared.h

@@ -1,0 +1,18 @@
+; Compiled by GCC
+.text
+	.align 2
+.proc _main
+.global _main
+_main:
+;  Function 'main'; 0 bytes of locals, 0 regs to save.
+	sw	-4(r29),r30	; push fp
+	add	r30,r0,r29	; fp = sp
+	sw	-8(r29),r31	; push ret addr
+	subui	r29,r29,#8	; alloc local storage
+	jal	___main
+	nop	; not filled.
+	jal	_run_os_tests
+	nop	; not filled.
+	jal	_exit
+	nop
+.endproc _main
